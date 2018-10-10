@@ -20,6 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+//    func moveToHome() {
+//        let tabVC = self.window?.rootViewController as! UITabBarController
+//        let homeVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "homeNavigationVC") as! UINavigationController
+//        let chartVC = UIStoryboard(name: "Chart", bundle: nil).instantiateViewController(withIdentifier: "chartVC")
+//        let immunizationVC = UIStoryboard(name: "Immunization", bundle: nil).instantiateViewController(withIdentifier: "immunizationVC")
+//        let medicalRecordVC = UIStoryboard(name: "MedicalRecord", bundle: nil).instantiateViewController(withIdentifier: "medRecNavigationVC") as! UINavigationController
+//
+//        tabVC.viewControllers = [homeVC, chartVC, immunizationVC, medicalRecordVC]
+//        tabVC.selectedViewController = homeVC
+//        self.window?.makeKeyAndVisible()
+//    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
