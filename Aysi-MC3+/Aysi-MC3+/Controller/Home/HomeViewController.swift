@@ -14,13 +14,12 @@ class HomeViewController: UIViewController {
     
     
     // MARK: - Variables
-    let headerCellId = ["",
+    let headerCellId = ["Empty",
                         "Ayah Tau Gak?",
                         "Si Buah Hati",
                         "Si Belahan Hati",
                         "Si Kecil...",
                         "Tips"]
-    
     let headerCellSize = [CGSize(width: 10, height: 25),
                           CGSize(width: 98, height: 25),
                           CGSize(width: 83, height: 25),
@@ -32,10 +31,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "NavBar Image"), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage(named: "NavBar Image")
+        self.navigationController?.view.backgroundColor = UIColor(displayP3Red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.gantiIUmur(notification:)), name: Notification.Name("gantiUmur"), object: nil)
         addUmurButton()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         setTitleUmur()
     }
     
@@ -54,7 +55,7 @@ class HomeViewController: UIViewController {
 
     @objc func umurAction() {
         let pilihUmurVC = self.storyboard?.instantiateViewController(withIdentifier: "pilihUmurVC") as! PilihUmurViewController
-
+        
         let transition:CATransition = CATransition()
         transition.duration = 0.3
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
@@ -87,11 +88,15 @@ class HomeViewController: UIViewController {
             navigationItem.title = "Bulan 6"
         }
     }
+    
+    @objc func gantiIUmur(notification: NSNotification) {
+        setTitleUmur()
+    }
 }
 
-extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        print("Tapped : \(indexPath.row)")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -99,8 +104,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        return collectionView.dequeueReusableCell(withReuseIdentifier: headerCellId[indexPath.row], for: indexPath)
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return headerCellSize[indexPath.item]
+    }
 }

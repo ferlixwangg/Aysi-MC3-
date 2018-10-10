@@ -10,14 +10,9 @@ import UIKit
 
 class PilihUmurTableViewController: UITableViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -28,6 +23,7 @@ class PilihUmurTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         Globals.currentAge = indexPath.row
         
+        NotificationCenter.default.post(name: Notification.Name("gantiUmur"), object: nil)
         let transition:CATransition = CATransition()
         transition.duration = 0.3
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)

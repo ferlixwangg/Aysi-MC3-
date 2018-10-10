@@ -28,9 +28,6 @@
                                 <textAttributes key="largeTitleTextAttributes">
                                     <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="34"/>
                                 </textAttributes>
-                                <items>
-                                    <navigationItem title="Umur Anak" id="RhI-89-UIz"/>
-                                </items>
                             </navigationBar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4r-S8-nL1">
                                 <rect key="frame" x="0.0" y="140" width="375" height="440"/>
@@ -324,15 +321,15 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bvm-ls-zwU">
                                 <rect key="frame" x="0.0" y="140" width="375" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="5" id="3PG-Gk-YaE">
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="8" id="3PG-Gk-YaE">
                                     <size key="itemSize" width="100" height="20"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AuZ-Ag-gdV">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Empty" id="AuZ-Ag-gdV">
                                         <rect key="frame" x="0.0" y="0.66666666666666663" width="10" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -341,8 +338,8 @@
                                         </view>
                                         <size key="customSize" width="10" height="25"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6bn-Sb-NmM">
-                                        <rect key="frame" x="15" y="0.66666666666666663" width="98" height="25"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Ayah Tau Gak?" id="6bn-Sb-NmM">
+                                        <rect key="frame" x="18" y="0.66666666666666663" width="98" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="98" height="25"/>
@@ -364,8 +361,8 @@
                                         </view>
                                         <size key="customSize" width="98" height="25"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oBR-q4-0xT">
-                                        <rect key="frame" x="118" y="0.66666666666666663" width="83" height="25"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Si Buah Hati" id="oBR-q4-0xT">
+                                        <rect key="frame" x="124" y="0.66666666666666663" width="83" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="83" height="25"/>
@@ -386,8 +383,8 @@
                                         </view>
                                         <size key="customSize" width="83" height="25"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3iF-W5-5gB">
-                                        <rect key="frame" x="206" y="0.66666666666666663" width="100" height="25"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Si Belahan Hati" id="3iF-W5-5gB">
+                                        <rect key="frame" x="215" y="0.66666666666666663" width="100" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
@@ -408,8 +405,8 @@
                                         </view>
                                         <size key="customSize" width="100" height="25"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jzt-Pz-fLm">
-                                        <rect key="frame" x="311" y="0.66666666666666663" width="66" height="25"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Si Kecil..." id="jzt-Pz-fLm">
+                                        <rect key="frame" x="323" y="0.66666666666666663" width="66" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="66" height="25"/>
@@ -430,8 +427,8 @@
                                         </view>
                                         <size key="customSize" width="66" height="25"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="S1R-T8-j5n">
-                                        <rect key="frame" x="382" y="0.66666666666666663" width="35" height="25"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Tips" id="S1R-T8-j5n">
+                                        <rect key="frame" x="397" y="0.66666666666666663" width="35" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="35" height="25"/>
@@ -453,6 +450,10 @@
                                         <size key="customSize" width="35" height="25"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="5Aq-I0-sCs" id="bA2-Mt-S0R"/>
+                                    <outlet property="delegate" destination="5Aq-I0-sCs" id="Y0J-PI-Qlf"/>
+                                </connections>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-22-0vA">
                                 <rect key="frame" x="0.0" y="174" width="375" height="26"/>
