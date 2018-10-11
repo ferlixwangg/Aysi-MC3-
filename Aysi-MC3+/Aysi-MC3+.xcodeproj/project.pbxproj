@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C29E992216F33C00042CA3A /* CategoryHowToTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C29E991216F33C00042CA3A /* CategoryHowToTableViewCell.swift */; };
 		BA3DF15A216B3CCB00086617 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3DF159216B3CCB00086617 /* Home.storyboard */; };
 		BA3DF15C216B3CD400086617 /* HowTo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3DF15B216B3CD400086617 /* HowTo.storyboard */; };
 		BA3DF15E216B3CDE00086617 /* Chart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3DF15D216B3CDE00086617 /* Chart.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C29E991216F33C00042CA3A /* CategoryHowToTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHowToTableViewCell.swift; sourceTree = "<group>"; };
 		BA3DF159216B3CCB00086617 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BA3DF15B216B3CD400086617 /* HowTo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HowTo.storyboard; sourceTree = "<group>"; };
 		BA3DF15D216B3CDE00086617 /* Chart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chart.storyboard; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				BAD99859216DE04200A160BC /* CategoryHowToViewController.swift */,
 				BAD9985B216DE05900A160BC /* ListHowToViewController.swift */,
 				BAD9985D216DE0E500A160BC /* DetailHowToViewController.swift */,
+				7C29E991216F33C00042CA3A /* CategoryHowToTableViewCell.swift */,
 			);
 			path = "How To";
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				BAC82D55216772B300C4D2EB /* AppDelegate.swift in Sources */,
 				BAD9985E216DE0E500A160BC /* DetailHowToViewController.swift in Sources */,
 				BAD99857216CB82200A160BC /* Globals.swift in Sources */,
+				7C29E992216F33C00042CA3A /* CategoryHowToTableViewCell.swift in Sources */,
 				BA3DF178216B502B00086617 /* PilihUmurViewController.swift in Sources */,
 				BAD9985C216DE05900A160BC /* ListHowToViewController.swift in Sources */,
 				BAD9985A216DE04200A160BC /* CategoryHowToViewController.swift in Sources */,
@@ -419,7 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W7GMLURGAQ;
+				DEVELOPMENT_TEAM = 38FBS5765W;
 				INFOPLIST_FILE = "Aysi-MC3+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,7 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W7GMLURGAQ;
+				DEVELOPMENT_TEAM = 38FBS5765W;
 				INFOPLIST_FILE = "Aysi-MC3+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
