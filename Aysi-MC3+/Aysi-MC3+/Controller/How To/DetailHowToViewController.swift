@@ -10,21 +10,40 @@ import UIKit
 
 class DetailHowToViewController: UIViewController {
 
+    var detailContent : [String] = []
+    var index : Int = 0
+    var clickedIndex : Int = 0
+    
+    @IBOutlet weak var detailContentTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension DetailHowToViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return detailContent.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = detailContentTable.dequeueReusableCell(withIdentifier: "DetailHowToCell", for: indexPath) as! DetailHowToTableViewCell
+        cell.contentCategoryInCell.text = detailContent[indexPath.row]
+        return cell
+    }
+    
+}
 
+extension DetailHowToViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        clickedIndex = indexPath.row
+        performSegue(withIdentifier: "DetailToHowTo", sender: self)
+    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? ListHowToViewController{
+//         destination.index = clickedIndex
+//        }
+//    }
 }
