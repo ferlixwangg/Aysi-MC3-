@@ -69,7 +69,7 @@
                     <navigationItem key="navigationItem" id="n8I-uS-DI4"/>
                     <connections>
                         <outlet property="howToTable" destination="NKb-1O-RQm" id="pk0-3T-weg"/>
-                        <segue destination="bkf-UE-Qfr" kind="show" id="rUa-HD-Ba9"/>
+                        <segue destination="bkf-UE-Qfr" kind="show" identifier="CategoryToDetail" id="rUa-HD-Ba9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AO4-mj-b7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,7 +89,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="jhb-Wp-EN0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailHowToCell" rowHeight="60" id="jhb-Wp-EN0" customClass="DetailHowToTableViewCell" customModule="Aysi_MC3_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jhb-Wp-EN0" id="Z1h-yi-fwn">
@@ -103,19 +103,108 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Right Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="IsP-YH-zB0">
+                                                    <rect key="frame" x="340" y="22" width="10" height="10"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentCategoryInCell" destination="EZA-9y-za5" id="Syr-GR-Csg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bkf-UE-Qfr" id="2DF-oX-o90"/>
+                                    <outlet property="delegate" destination="bkf-UE-Qfr" id="6yl-Jd-jHu"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="s4i-fe-uWz"/>
                     </view>
+                    <connections>
+                        <outlet property="detailContentTable" destination="j4P-vd-WrM" id="zYv-7A-DLj"/>
+                        <segue destination="odH-Ep-mMH" kind="show" identifier="DetailToHowTo" id="ZsA-Ko-VIF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0YO-zz-1an" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1928.8" y="114.53201970443351"/>
+        </scene>
+        <!--List How To View Controller-->
+        <scene sceneID="pRR-MS-cWz">
+            <objects>
+                <viewController id="odH-Ep-mMH" customClass="ListHowToViewController" customModule="Aysi_MC3_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tPe-pz-YWq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jPV-Nm-Dps">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="Nlp-n7-hkl" kind="embed" id="vL4-1U-tyh"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Nws-jb-J7z">
+                                <rect key="frame" x="168" y="680" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.24962702440000001" green="1" blue="0.23406478880000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BH4-21-Owt"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerViewInListHowTo" destination="jPV-Nm-Dps" id="uWy-BR-Vwh"/>
+                        <outlet property="pageControllInListHowTo" destination="Nws-jb-J7z" id="7iy-WN-GAB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kyl-X1-V91" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2684" y="116.74876847290641"/>
+        </scene>
+        <!--Image List How To Page View Controller-->
+        <scene sceneID="2JN-eD-Ktt">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Nlp-n7-hkl" customClass="ImageListHowToPageViewController" customModule="Aysi_MC3_" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqc-v7-TG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3495" y="117"/>
+        </scene>
+        <!--Image List How To View Controller-->
+        <scene sceneID="TOQ-Cm-mEV">
+            <objects>
+                <viewController storyboardIdentifier="ItemController" id="gMu-32-d3R" customClass="ImageListHowToViewController" customModule="Aysi_MC3_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y0e-Yq-D8O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zSQ-1H-pW2">
+                                <rect key="frame" x="0.0" y="82" width="375" height="266"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBs-wo-LeZ">
+                                <rect key="frame" x="49" y="407" width="277" height="212"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="A91-LZ-GdQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageInListHowTo" destination="zSQ-1H-pW2" id="1uq-5b-NS7"/>
+                        <outlet property="labelInListHowTo" destination="pBs-wo-LeZ" id="vRZ-y4-yGZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQE-a4-a7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4248.8000000000002" y="116.74876847290641"/>
         </scene>
         <!--How To-->
         <scene sceneID="cXG-dg-Scr">

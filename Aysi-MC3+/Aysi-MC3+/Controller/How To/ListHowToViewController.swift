@@ -9,10 +9,23 @@
 import UIKit
 
 class ListHowToViewController: UIViewController {
-
+    
+    @IBOutlet weak var containerViewInListHowTo: UIView!
+    @IBOutlet weak var pageControllInListHowTo: UIPageControl!
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let imageListHowToPageViewController = segue.destination as? ImageListHowToPageViewController {
+            imageListHowToPageViewController.imageListHowToDelegate = self
+        }
+    }
+    
+//    var index : Int = 0
+//    var imageHowTo : [UIImage] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         // Do any additional setup after loading the view.
     }
     
@@ -27,4 +40,17 @@ class ListHowToViewController: UIViewController {
     }
     */
 
+}
+
+extension ListHowToViewController : ImageListHowToPageViewControllerDelegate {
+    func ImageListHowToPageViewController(tutorialPageViewController: ImageListHowToPageViewController, didUpdatePageCount count: Int) {
+        pageControllInListHowTo.numberOfPages = count
+    }
+    
+    func ImageListHowToPageViewController(tutorialPageViewController: ImageListHowToPageViewController, didUpdatePageIndex index: Int) {
+        pageControllInListHowTo.currentPage = index
+    }
+    
+    
+    
 }

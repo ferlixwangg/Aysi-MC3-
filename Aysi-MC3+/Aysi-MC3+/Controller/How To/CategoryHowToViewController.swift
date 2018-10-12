@@ -11,11 +11,16 @@ import UIKit
 class CategoryHowToViewController: UIViewController {
    
     @IBOutlet weak var howToTable: UITableView!
+    var clickedSection: Int = 0
+    var clickedIndex: Int  = 0
     var sections : [String] = ["Istri","Anak"]
     var imageInTable = [[UIImage(named: "spa")!,UIImage(named: "spa")!],
                         [UIImage(named: "spa")!,UIImage(named: "spa")!]]
     var categoryInTable = [["Pijat","Kebersihan"],["Pijat","Kebersihan"]]
-    var detailCategoryInTable = [[["Pijat Oksitosin"],["Korek Telinga","Korek Hidung"]],[["Pijat Dada","Pijat Perut","Pijat Kepala"],["Korek Telinga","Sedot Ingus"]]]
+    var detailCategoryInTable = [[["Pijat Oksitosin"],[]],
+                                 [["Pijat Dada","Pijat Perut","Pijat Kepala"],[]]]
+//    var tutorialHowToInTable = [[[[UIImage(named: "PijatOksitosin1")!,UIImage(named: "PijatOksitosin2")!],[]],
+//                                 [""]]]
 
 
     override func viewDidLoad() {
@@ -47,8 +52,6 @@ extension CategoryHowToViewController: UITableViewDataSource{
         return self.sections.count
     }
     
-
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoryInTable.count
@@ -73,7 +76,16 @@ extension CategoryHowToViewController: UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+        clickedSection = indexPath.section
+        clickedIndex = indexPath.row
+        performSegue(withIdentifier: "CategoryToDetail", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailHowToViewController{
+            destination.detailContent = detailCategoryInTable[clickedSection][clickedIndex]
+            destination.index = clickedIndex
+        }
     }
     
 }
