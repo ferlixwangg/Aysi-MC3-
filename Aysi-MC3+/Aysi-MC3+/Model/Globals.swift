@@ -9,5 +9,6 @@
 import Foundation
 
 struct Globals {
-    static var currentAge = 0
+    // 1 -> Mengandung, 10 -> Bulan 6
+    static var currentAge = 1
 }

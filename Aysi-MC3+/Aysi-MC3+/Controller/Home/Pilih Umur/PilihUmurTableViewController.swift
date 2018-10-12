@@ -21,7 +21,7 @@ class PilihUmurTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Globals.currentAge = indexPath.row
+        Globals.currentAge = indexPath.row+1
         
         NotificationCenter.default.post(name: Notification.Name("gantiUmur"), object: nil)
         let transition:CATransition = CATransition()

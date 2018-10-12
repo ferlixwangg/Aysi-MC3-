@@ -22,10 +22,15 @@
 		BA3DF174216B466700086617 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA3DF167216B464500086617 /* Nunito-SemiBold.ttf */; };
 		BA3DF176216B48B500086617 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF175216B48B500086617 /* HomeViewController.swift */; };
 		BA3DF178216B502B00086617 /* PilihUmurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF177216B502B00086617 /* PilihUmurViewController.swift */; };
+		BAC74DC6216E024500B1C43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC74DC5216E024500B1C43A /* Assets.xcassets */; };
+		BAC74DE9216E0DD900B1C43A /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC74DE8216E0DD900B1C43A /* HeaderCollectionViewCell.swift */; };
+		BAC74DEB216E1D2400B1C43A /* HomeContentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC74DEA216E1D2400B1C43A /* HomeContentTableViewController.swift */; };
+		BAC74DED216E82F400B1C43A /* AyahTauGakViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC74DEC216E82F400B1C43A /* AyahTauGakViewController.swift */; };
+		BAC74DEF216E839A00B1C43A /* AyahTauGakPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC74DEE216E839A00B1C43A /* AyahTauGakPageViewController.swift */; };
+		BAC74DF82170538C00B1C43A /* SiBuahHatiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC74DF72170538C00B1C43A /* SiBuahHatiTableViewCell.swift */; };
 		BAC82D55216772B300C4D2EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC82D54216772B300C4D2EB /* AppDelegate.swift */; };
 		BAC82D5A216772B300C4D2EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC82D58216772B300C4D2EB /* Main.storyboard */; };
 		BAC82D5D216772B300C4D2EB /* Aysi_MC3_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAC82D5B216772B300C4D2EB /* Aysi_MC3_.xcdatamodeld */; };
-		BAC82D5F216772B400C4D2EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC82D5E216772B400C4D2EB /* Assets.xcassets */; };
 		BAC82D62216772B400C4D2EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC82D60216772B400C4D2EB /* LaunchScreen.storyboard */; };
 		BAD99855216C9CF800A160BC /* PilihUmurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD99854216C9CF800A160BC /* PilihUmurTableViewController.swift */; };
 		BAD99857216CB82200A160BC /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD99856216CB82200A160BC /* Globals.swift */; };
@@ -50,11 +55,16 @@
 		BA3DF16C216B464600086617 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraLight.ttf"; sourceTree = "<group>"; };
 		BA3DF175216B48B500086617 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BA3DF177216B502B00086617 /* PilihUmurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilihUmurViewController.swift; sourceTree = "<group>"; };
+		BAC74DC5216E024500B1C43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAC74DE8216E0DD900B1C43A /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		BAC74DEA216E1D2400B1C43A /* HomeContentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentTableViewController.swift; sourceTree = "<group>"; };
+		BAC74DEC216E82F400B1C43A /* AyahTauGakViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyahTauGakViewController.swift; sourceTree = "<group>"; };
+		BAC74DEE216E839A00B1C43A /* AyahTauGakPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AyahTauGakPageViewController.swift; sourceTree = "<group>"; };
+		BAC74DF72170538C00B1C43A /* SiBuahHatiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiBuahHatiTableViewCell.swift; sourceTree = "<group>"; };
 		BAC82D51216772B300C4D2EB /* Aysi-MC3+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aysi-MC3+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC82D54216772B300C4D2EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAC82D59216772B300C4D2EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAC82D5C216772B300C4D2EB /* Aysi_MC3_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aysi_MC3_.xcdatamodel; sourceTree = "<group>"; };
-		BAC82D5E216772B400C4D2EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAC82D61216772B400C4D2EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAC82D63216772B400C4D2EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAD99854216C9CF800A160BC /* PilihUmurTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilihUmurTableViewController.swift; sourceTree = "<group>"; };
@@ -110,8 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				BA3DF164216B463500086617 /* Fonts */,
+				BAC74DC5216E024500B1C43A /* Assets.xcassets */,
 				BAC82D54216772B300C4D2EB /* AppDelegate.swift */,
-				BAC82D5E216772B400C4D2EB /* Assets.xcassets */,
 			);
 			path = Additional;
 			sourceTree = "<group>";
@@ -135,10 +145,39 @@
 			isa = PBXGroup;
 			children = (
 				BA3DF175216B48B500086617 /* HomeViewController.swift */,
+				BAC74DE8216E0DD900B1C43A /* HeaderCollectionViewCell.swift */,
+				BAC74DEA216E1D2400B1C43A /* HomeContentTableViewController.swift */,
+				BAC74DF1216E83BA00B1C43A /* Pilih Umur */,
+				BAC74DF0216E83A300B1C43A /* Ayah Tau Gak */,
+				BAC74DF62170536800B1C43A /* Si Buah Hati */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BAC74DF0216E83A300B1C43A /* Ayah Tau Gak */ = {
+			isa = PBXGroup;
+			children = (
+				BAC74DEE216E839A00B1C43A /* AyahTauGakPageViewController.swift */,
+				BAC74DEC216E82F400B1C43A /* AyahTauGakViewController.swift */,
+			);
+			path = "Ayah Tau Gak";
+			sourceTree = "<group>";
+		};
+		BAC74DF1216E83BA00B1C43A /* Pilih Umur */ = {
+			isa = PBXGroup;
+			children = (
 				BA3DF177216B502B00086617 /* PilihUmurViewController.swift */,
 				BAD99854216C9CF800A160BC /* PilihUmurTableViewController.swift */,
 			);
-			path = Home;
+			path = "Pilih Umur";
+			sourceTree = "<group>";
+		};
+		BAC74DF62170536800B1C43A /* Si Buah Hati */ = {
+			isa = PBXGroup;
+			children = (
+				BAC74DF72170538C00B1C43A /* SiBuahHatiTableViewCell.swift */,
+			);
+			path = "Si Buah Hati";
 			sourceTree = "<group>";
 		};
 		BAC82D48216772B200C4D2EB = {
@@ -245,7 +284,6 @@
 				BA3DF170216B465C00086617 /* Nunito-ExtraLight.ttf in Resources */,
 				BA3DF172216B466100086617 /* Nunito-Medium.ttf in Resources */,
 				BA3DF15C216B3CD400086617 /* HowTo.storyboard in Resources */,
-				BAC82D5F216772B400C4D2EB /* Assets.xcassets in Resources */,
 				BA3DF174216B466700086617 /* Nunito-SemiBold.ttf in Resources */,
 				BA3DF162216B3CFD00086617 /* Settings.storyboard in Resources */,
 				BA3DF16D216B465300086617 /* Nunito-Bold.ttf in Resources */,
@@ -253,6 +291,7 @@
 				BA3DF171216B465F00086617 /* Nunito-Light.ttf in Resources */,
 				BA3DF160216B3CEA00086617 /* Immunization.storyboard in Resources */,
 				BA3DF15A216B3CCB00086617 /* Home.storyboard in Resources */,
+				BAC74DC6216E024500B1C43A /* Assets.xcassets in Resources */,
 				BA3DF15E216B3CDE00086617 /* Chart.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,12 +304,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAC82D5D216772B300C4D2EB /* Aysi_MC3_.xcdatamodeld in Sources */,
+				BAC74DF82170538C00B1C43A /* SiBuahHatiTableViewCell.swift in Sources */,
 				BAC82D55216772B300C4D2EB /* AppDelegate.swift in Sources */,
 				BAD9985E216DE0E500A160BC /* DetailHowToViewController.swift in Sources */,
 				BAD99857216CB82200A160BC /* Globals.swift in Sources */,
 				BA3DF178216B502B00086617 /* PilihUmurViewController.swift in Sources */,
 				BAD9985C216DE05900A160BC /* ListHowToViewController.swift in Sources */,
 				BAD9985A216DE04200A160BC /* CategoryHowToViewController.swift in Sources */,
+				BAC74DE9216E0DD900B1C43A /* HeaderCollectionViewCell.swift in Sources */,
+				BAC74DED216E82F400B1C43A /* AyahTauGakViewController.swift in Sources */,
+				BAC74DEF216E839A00B1C43A /* AyahTauGakPageViewController.swift in Sources */,
+				BAC74DEB216E1D2400B1C43A /* HomeContentTableViewController.swift in Sources */,
 				BA3DF176216B48B500086617 /* HomeViewController.swift in Sources */,
 				BAD99855216C9CF800A160BC /* PilihUmurTableViewController.swift in Sources */,
 			);

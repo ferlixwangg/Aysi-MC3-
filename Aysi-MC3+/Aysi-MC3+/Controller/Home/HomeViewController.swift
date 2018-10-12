@@ -12,35 +12,39 @@ class HomeViewController: UIViewController {
 
     // MARK: - Outlets
     
-    
     // MARK: - Variables
     let headerCellId = ["Empty",
                         "Ayah Tau Gak?",
                         "Si Buah Hati",
                         "Si Belahan Hati",
                         "Si Kecil...",
-                        "Tips"]
-    let headerCellSize = [CGSize(width: 10, height: 25),
+                        "Tips",
+                        "Empty2"]
+    let headerCellSize = [CGSize(width: 1, height: 25),
                           CGSize(width: 98, height: 25),
                           CGSize(width: 83, height: 25),
                           CGSize(width: 100, height: 25),
                           CGSize(width: 64, height: 25),
-                          CGSize(width: 35, height: 25)]
+                          CGSize(width: 35, height: 25),
+                          CGSize(width: 1, height: 25)]
+    var currentlyActiveHeader: IndexPath!
     
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "NavBar Image"), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage(named: "NavBar Image")
-        self.navigationController?.view.backgroundColor = UIColor(displayP3Red: 250/255, green: 250/255, blue: 250/255, alpha: 1)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.gantiIUmur(notification:)), name: Notification.Name("gantiUmur"), object: nil)
+        setupTopBarDisplay()
         addUmurButton()
         setTitleUmur()
+        setupNotificationCenter()
     }
     
     // MARK: - Functions
+    func setupTopBarDisplay() {
+        UIApplication.shared.statusBarView?.backgroundColor = UIColor(displayP3Red: 249/255, green: 249/255, blue: 249/255, alpha: 1.0)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+    }
+    
     func addUmurButton() {
         let umurButton = UIButton(type: .custom)
         umurButton.frame = CGRect(x: 0, y: 0, width: 14, height: 14)
@@ -66,25 +70,25 @@ class HomeViewController: UIViewController {
     }
     
     func setTitleUmur() {
-        if Globals.currentAge == 0 {
+        if Globals.currentAge == 1 {
             navigationItem.title = "Mengandung"
-        } else if Globals.currentAge == 1 {
-            navigationItem.title = "Minggu 1"
         } else if Globals.currentAge == 2 {
-            navigationItem.title = "Minggu 2"
+            navigationItem.title = "Minggu 1"
         } else if Globals.currentAge == 3 {
-            navigationItem.title = "Minggu 3"
+            navigationItem.title = "Minggu 2"
         } else if Globals.currentAge == 4 {
-            navigationItem.title = "Minggu 4"
+            navigationItem.title = "Minggu 3"
         } else if Globals.currentAge == 5 {
-            navigationItem.title = "Bulan 2"
+            navigationItem.title = "Minggu 4"
         } else if Globals.currentAge == 6 {
-            navigationItem.title = "Bulan 3"
+            navigationItem.title = "Bulan 2"
         } else if Globals.currentAge == 7 {
-            navigationItem.title = "Bulan 4"
+            navigationItem.title = "Bulan 3"
         } else if Globals.currentAge == 8 {
-            navigationItem.title = "Bulan 5"
+            navigationItem.title = "Bulan 4"
         } else if Globals.currentAge == 9 {
+            navigationItem.title = "Bulan 5"
+        } else if Globals.currentAge == 10 {
             navigationItem.title = "Bulan 6"
         }
     }
@@ -92,11 +96,20 @@ class HomeViewController: UIViewController {
     @objc func gantiIUmur(notification: NSNotification) {
         setTitleUmur()
     }
+    
+    func setupNotificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.gantiIUmur(notification:)), name: Notification.Name("gantiUmur"), object: nil)
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Tapped : \(indexPath.row)")
+        let prevActiveCell = collectionView.cellForItem(at: currentlyActiveHeader) as! HeaderCollectionViewCell
+        prevActiveCell.isSelected = false
+        
+        let currentlyActiveCell = collectionView.cellForItem(at: indexPath) as! HeaderCollectionViewCell
+        currentlyActiveCell.isSelected = true
+        currentlyActiveHeader = indexPath
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -104,7 +117,18 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: headerCellId[indexPath.row], for: indexPath)
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "headerCell", for: indexPath) as! HeaderCollectionViewCell
+        cell.titleLabel.text = headerCellId[indexPath.row]
+        
+        if indexPath.row == 1 {
+            cell.isSelected = true
+            currentlyActiveHeader = indexPath
+        } else {
+            cell.isSelected = false
+        }
+        
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
